@@ -9,6 +9,11 @@ import * as am4core from "@amcharts/amcharts4/core"
 import * as am4charts from "@amcharts/amcharts4/charts"
 import timeSeries from "@/data/timeSeries.js"
 
+const COLORS = {
+  brown: "#433525",
+  orange: "#E4AD49"
+}
+
 export default {
   name: 'AreaChart',
   mounted() {
@@ -24,8 +29,10 @@ export default {
 
     // Create series
     let series = chart.series.push(new am4charts.LineSeries());
+    series.fillOpacity = 1;
+    series.fill = COLORS.brown,
     series.name = "Units";
-    series.stroke = am4core.color("darkorange");
+    series.stroke = am4core.color(COLORS.orange);
     series.strokeWidth = 3;
     series.dataFields.valueY = "prevalence";
     series.dataFields.dateX = "date";
