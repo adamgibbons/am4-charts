@@ -7,21 +7,17 @@
 
 import * as am4core from "@amcharts/amcharts4/core"
 import * as am4charts from "@amcharts/amcharts4/charts"
-import timeSeries from "@/data/timeSeries.js"
-
-const COLORS = {
-  brown: "#433525",
-  orange: "#E4AD49"
-}
+import COLORS from '@/data/colors'
 
 export default {
   name: 'AreaChart',
+  props: ['timeSeries'],
   mounted() {
     // Create chart instance
     let chart = am4core.create(this.$refs.chartdiv, am4charts.XYChart);
 
     // Add data
-    chart.data = timeSeries
+    chart.data = this.timeSeries
 
     // Create axes
     chart.xAxes.push(new am4charts.DateAxis())

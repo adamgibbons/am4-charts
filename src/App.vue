@@ -1,16 +1,26 @@
 <template>
   <div id="app">
-    <AreaChart />
+    <h2>Area chart</h2>
+    <AreaChart :timeSeries="timeSeries" />
+
+    <h2>Bar chart</h2>
+    <BarChart :series="categorySeries" />
   </div>
 </template>
 
 <script>
-import AreaChart from './components/AreaChart.vue'
+import { AreaChart, BarChart } from '@/components'
+import timeSeries from "@/data/timeSeries.js"
+import categorySeries from "@/data/categorySeries.json"
 
 export default {
   name: 'app',
   components: {
-    AreaChart
+    AreaChart,
+    BarChart
+  },
+  data () {
+    return { timeSeries, categorySeries }
   }
 }
 </script>

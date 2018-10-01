@@ -1,0 +1,37 @@
+[{
+  "country": "USA",
+  "prevalence": 3025
+}, {
+  "country": "China",
+  "prevalence": 1882
+}, {
+  "country": "Japan",
+  "prevalence": 1809
+}, {
+  "country": "Germany",
+  "prevalence": 1322
+}, {
+  "country": "UK",
+  "prevalence": 1122
+}, {
+  "country": "France",
+  "prevalence": 1114
+}, {
+  "country": "India",
+  "prevalence": 984
+}, {
+  "country": "Spain",
+  "prevalence": 711
+}, {
+  "country": "Netherlands",
+  "prevalence": 665
+}, {
+  "country": "Russia",
+  "prevalence": 580
+}, {
+  "country": "South Korea",
+  "prevalence": 443
+}, {
+  "country": "Canada",
+  "prevalence": 441
+}]
