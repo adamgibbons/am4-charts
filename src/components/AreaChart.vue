@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div>{{title}}</div>
     <div class="chart" ref="chartdiv">
     </div>
   </div>

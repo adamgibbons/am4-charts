@@ -1,0 +1,46 @@
+[
+  {
+    "sector": "Aviation",
+    "summary": 55,
+    "data" : [
+      {
+        "country": "Brazil",
+        "prevalence": 20
+      }, {
+        "country": "China",
+        "prevalence": 1
+      }, {
+        "country": "UK",
+        "prevalence": 66
+      }, {
+        "country": "France",
+        "prevalence": 85
+      }, {
+        "country": "USA",
+        "prevalence": 99
+      }
+    ]
+  },
+  {
+    "sector": "Power",
+    "summary": 80,
+    "data" : [
+      {
+        "country": "Brazil",
+        "prevalence": 5
+      }, {
+        "country": "China",
+        "prevalence": 33
+      }, {
+        "country": "UK",
+        "prevalence": 71
+      }, {
+        "country": "France",
+        "prevalence": 44
+      }, {
+        "country": "USA",
+        "prevalence": 79
+      }
+    ]
+  }
+]

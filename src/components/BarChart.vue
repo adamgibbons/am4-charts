@@ -1,7 +1,12 @@
 <template>
-  <div>
-    <div>{{title}}</div>
-    <div class="chart" ref="chartdiv">
+  <div class="flex-row">
+    <div class="flex-row-item">
+      <div class="label-percentage">{{summary}}%</div>
+      <div class="label-sector">Sector: {{title}}</div>
+    </div>
+    <div class="flex-row-item">
+      <div class="chart" ref="chartdiv">
+      </div>
     </div>
   </div>
 </template>
@@ -14,7 +19,7 @@ import COLORS from '@/data/colors'
 
 export default {
   name: 'BarChart',
-  props: ['series', 'title'],
+  props: ['series', 'title', 'summary'],
   mounted() {
     var chart = am4core.create(this.$refs.chartdiv, am4charts.XYChart)
 

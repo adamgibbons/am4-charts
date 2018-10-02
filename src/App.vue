@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="wrapper">
+  <div id="app">
     <div class="column">
-      <BarChart :series="categorySeries" title="Bar Chart" />
+      <BarChartList :series="apiCall" title="Bar Chart" />
     </div>
     <div class="column">
       <AreaChart :series="timeSeries" title="Area Chart" />
@@ -10,15 +10,15 @@
 </template>
 
 <script>
-import { AreaChart, BarChart } from '@/components'
+import { AreaChart, BarChartList } from '@/components'
 import timeSeries from "@/data/timeSeries.js"
-import categorySeries from "@/data/categorySeries.json"
+import apiCall from "@/data/apiCall.json"
 
 export default {
   name: 'app',
-  components: { AreaChart, BarChart },
+  components: { AreaChart, BarChartList },
   data () {
-    return { timeSeries, categorySeries }
+    return { timeSeries, apiCall }
   }
 }
 </script>
@@ -29,16 +29,32 @@ export default {
   text-align: center;
   margin-top: 60px;
 }
-.wrapper {
-  display: block;
-}
 .column {
   display: inline-block;
-  margin: 1rem;
+  vertical-align: top;
 }
 .chart {
   /*width: 100%;*/
-  width: 500px;
-  height: 300px;
+  width: 470px;
+  height: 230px;
+}
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  vertical-align: 
+}
+.flex-row-item {
+}
+.label-percentage {
+  font-size: 2rem;
+  border: 1px solid #bbb;
+  padding: 0;
+  margin: 0 0 .1em;
+}
+.label-sector {
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-style: oblique;
 }
 </style>
