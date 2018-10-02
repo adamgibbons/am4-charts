@@ -1,5 +1,8 @@
 <template>
-  <div class="chart" ref="chartdiv">
+  <div>
+    <div>{{title}}</div>
+    <div class="chart" ref="chartdiv">
+    </div>
   </div>
 </template>
 
@@ -11,13 +14,13 @@ import COLORS from '@/data/colors'
 
 export default {
   name: 'AreaChart',
-  props: ['timeSeries'],
+  props: ['series', 'title'],
   mounted() {
     // Create chart instance
     let chart = am4core.create(this.$refs.chartdiv, am4charts.XYChart);
 
     // Add data
-    chart.data = this.timeSeries
+    chart.data = this.series
 
     // Create axes
     chart.xAxes.push(new am4charts.DateAxis())
@@ -40,11 +43,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.chart {
-  width: 100%;
-  height: 500px;
-}
-</style>

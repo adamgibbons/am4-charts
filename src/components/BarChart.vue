@@ -1,5 +1,8 @@
 <template>
-  <div class="chart" ref="chartdiv">
+  <div>
+    <div>{{title}}</div>
+    <div class="chart" ref="chartdiv">
+    </div>
   </div>
 </template>
 
@@ -11,7 +14,7 @@ import COLORS from '@/data/colors'
 
 export default {
   name: 'BarChart',
-  props: ['series'],
+  props: ['series', 'title'],
   mounted() {
     var chart = am4core.create(this.$refs.chartdiv, am4charts.XYChart)
 
@@ -52,10 +55,3 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.chart {
-  width: 100%;
-  height: 500px;
-}
-</style>
